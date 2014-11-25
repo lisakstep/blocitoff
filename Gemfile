@@ -13,6 +13,9 @@ ruby '2.0.0'
  group :development do
    gem 'sqlite3'
  end
+
+ ## Use Twitter Bootstrap
+ gem 'bootstrap-sass', '~> 3.1.1'
  
 
 # Standard gems
