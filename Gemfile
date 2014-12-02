@@ -29,6 +29,12 @@ ruby '2.0.0'
 
  ## create seed data
  gem 'faker'
+
+ ## set up tdd
+ group :development, :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+ end
  
 
 # Standard gems

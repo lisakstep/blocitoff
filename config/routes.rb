@@ -8,5 +8,8 @@ Blocitoff::Application.routes.draw do
   # You can have the root of your site routed with "root"
  root to: 'welcome#index'
 
+ resources :lists, only: [:new, :create, :show]
+ resources :items, only: [:new, :create, :show]
+
  
 end
