@@ -20,6 +20,15 @@ ruby '2.0.0'
 
  ## Use Autoprefixer with Bootstrap as recommended by Bootstrap
  gem 'autoprefixer-rails'
+
+ ## Devise user authentication 
+ gem 'devise'
+
+ ## Figaro handles sensitive data with environment vars
+ gem 'figaro', '1.0'
+
+ ## create seed data
+ gem 'faker'
  
 
 # Standard gems
