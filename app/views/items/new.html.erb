@@ -1,0 +1,5 @@
+<h2>Add new item</h2>
+<%= form_for Item.new do |form| %>
+  <%= form.text_field :content, placeholder: 'description' %>
+  <%= form.submit 'Save' %>
+<% end %>
