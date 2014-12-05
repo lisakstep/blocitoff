@@ -1,1 +1,4 @@
-<p><b><%= @list.title %></b></p>
+<p><b><%= current_user.list.title %></b></p>
+<% current_user.list.items.each do |item| %>
+   <%= item.content %><br/>
+<%   end %>
