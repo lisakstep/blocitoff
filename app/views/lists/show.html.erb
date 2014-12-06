@@ -1,8 +1,5 @@
 <h1><%= current_user.list.title %></b></h1>
 
-
-
-
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
@@ -12,23 +9,25 @@
     </tr>
   </thead>
   <tbody>
+    <% current_user.list.items.each do |item| %>
+      <tr>
+        <td>
+          <%= item.content %><br/>
+        </td>
+        <td>   
+          <%= item.days_left %><br/>
+        </td>
+        <td>
+          <input type="checkbox"><br/>
+        </td>
+      </tr>
+    <% end %>
     <tr>
       <td>
-        <% current_user.list.items.each do |item| %>
-          <%= item.content %><br/>
-        <% end %>
         <%= link_to "Add item", new_item_path, class: 'btn btn-primary' %>
       </td>
-      <td>
-        <% current_user.list.items.each do |item| %>
-          <%= item.days_left %><br/>
-        <% end %>
-      </td>
-      <td>
-        <% current_user.list.items.each do |item| %>
-          <input type="checkbox"><br/>
-        <% end %>
-      </td>
+      <td></td>
+      <td></td>
     </tr>
   </tbody>
 </table>
