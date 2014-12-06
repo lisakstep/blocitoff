@@ -10,6 +10,17 @@ class ItemsController < ApplicationController
     redirect_to @list
   end
 
+  def destroy
+    if @item.destroy
+     flash[:notice] = "Item deleted."
+    else
+      flash[:error] = "Error deleting the item. Please try again."
+    end
+
+    redirect_to @list
+
+  end
+
   private
 
   def item_params
