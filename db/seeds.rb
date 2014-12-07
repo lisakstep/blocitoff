@@ -32,10 +32,11 @@ admin.save!
  puts "#{List.count} lists generated."
 
 # Create items for the lists
-80.times do
+83.times do
   item = Item.create!(
     list: lists.sample,
-    content: Faker::Lorem.word
+    content: Faker::Lorem.word,
+    created_at: (Time.now - Random.new.rand(0..8).days)
     )
 end
 puts "#{Item.count} todo items generated"
