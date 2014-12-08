@@ -9,7 +9,7 @@ Blocitoff::Application.routes.draw do
  root to: 'welcome#index'
 
  resources :lists, only: [:new, :create, :show]
- resources :items, only: [:new, :create, :show]
+ resources :items, only: [:new, :create, :show, :destroy]
 
  
 end
