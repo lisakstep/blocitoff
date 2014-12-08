@@ -1,10 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-    if current_user
-      list_path current_user.list
-    else
-      root_path
-    end
+    redirect_to current_user.list if current_user 
   end
 
   def about

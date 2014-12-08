@@ -18,7 +18,9 @@
           <%= item.days_left %><br/>
         </td>
         <td>
-          <input type="checkbox"><br/>
+          <%= link_to(item, method: :delete) do %>
+            <input type="checkbox"><br/>
+          <% end %>
         </td>
       </tr>
     <% end %>

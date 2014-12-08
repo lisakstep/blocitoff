@@ -11,6 +11,8 @@ class ItemsController < ApplicationController
   end
 
   def destroy
+    @item = Item.find(params[:id])
+    @list = @item.list
     if @item.destroy
      flash[:notice] = "Item deleted."
     else
