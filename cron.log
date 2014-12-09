@@ -1,1 +1,2 @@
 SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"  WHERE (created_at <= '2014-12-02 03:06:05.884162')
+SQLite3::SQLException: no such table: items: SELECT "items".* FROM "items"  WHERE (created_at <= '2014-12-02 03:10:05.798478')
