@@ -27,6 +27,9 @@ ruby '2.0.0'
  ## Figaro handles sensitive data with environment vars
  gem 'figaro', '1.0'
 
+ ## Enable cron jobs to automate expired todo item deletion
+ gem 'whenever', :require => false
+
  ## create seed data
  gem 'faker'
 
