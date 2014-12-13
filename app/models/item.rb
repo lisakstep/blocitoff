@@ -4,4 +4,10 @@ class Item < ActiveRecord::Base
   def days_left
     7 - ( (Time.now - created_at)/(60*60*24) ).to_i
   end
+
+  private
+
+  def prune_list
+    Item.where("created_at <= ?", Time.now - 7.days).destroy_all
+  end
 end
