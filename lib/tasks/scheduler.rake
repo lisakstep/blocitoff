@@ -1,7 +1,4 @@
 desc "Autodelete old items task called by the Heroku scheduler add-on"
-  task :update_feed => :environment do
-    puts "Deleting old items..."
-    Item.connection
-    Item.prune_list
-    puts "done."
+  task :prune_list => :environment do
+    Item.where("created_at <= ?", Time.now - 7.days).destroy_all
   end
